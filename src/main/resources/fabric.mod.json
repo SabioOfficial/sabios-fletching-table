@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "sabios_fletching_table",
+  "version": "${version}",
+  "name": "sabio's fletching table",
+  "description": "sabio's idea of utilizing the fletching table!",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/sabios_fletching_table/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.sabio.sabios_fletching_table.client.sabios_fletching_tableDataGenerator"
+    ],
+    "client": [
+      "net.sabio.sabios_fletching_table.client.sabios_fletching_tableClient"
+    ],
+    "main": [
+      "net.sabio.sabios_fletching_table.sabios_fletching_table"
+    ]
+  },
+  "mixins": [
+    "sabios_fletching_table.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
