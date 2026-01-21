@@ -1,21 +1,19 @@
 package net.sabio.sabios_fletching_table.screen;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.render.GameRenderer;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class FletchingTableScreen extends HandledScreen<FletchingTableScreenHandler> {
-    private static final Identifier TEXTURE = Identifier.of("minecraft", "textures/gui/container/generic_54.png");
+    private static final Identifier TEXTURE = Identifier.of("minecraft", "textures/gui/container/shulker_box.png");
 
     public FletchingTableScreen(FletchingTableScreenHandler handler, PlayerInventory playerInventory, Text title) {
         super(handler, playerInventory, title);
         this.backgroundWidth = 176;
         this.backgroundHeight = 166;
+        this.playerInventoryTitleY = this.backgroundHeight - 94;
     }
 
     @Override
